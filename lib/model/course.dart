@@ -1,9 +1,11 @@
 class Course {
   final String id;
   final String name;
-  final List<String> studentIds = [];
+  final List<String> studentIds;
 
-  Course({required this.id, required this.name});
-
-  
+  Course({
+    required this.id,
+    required this.name,
+    List<String>? studentIds,
+  }) : studentIds = studentIds ?? [];
 }
